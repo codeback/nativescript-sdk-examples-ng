@@ -2,7 +2,8 @@ import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { Link } from "./../link";
 
 let menuLinks = [
-    new Link("Nested routers", "/routing/nested-routers"),
+    new Link("Nested routers", "/routing/nested-routers/first"),
+    new Link("Nested routers 2", "/routing/nested-routers-2/first")
 ];
 
 @Component({

@@ -5,9 +5,13 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { RoutingExamplesComponent } from "./routing-examples.component";
 import { NestedRoutersComponent } from "./nested-routers/nested-routers.component";
+import { NestedRoutersComponent as NestedRoutersComponent2 } from "./nested-routers-2/nested-routers.component";
 
 import { SubRouteOneComponent } from "./nested-routers/sub-route-one.component";
 import { SubRouteTwoComponent } from "./nested-routers/sub-route-two.component";
+
+import { SubRouteOneComponent as SubRouteOneComponent2 } from "./nested-routers-2/sub-route-one.component";
+import { SubRouteTwoComponent as SubRouteTwoComponent2 } from "./nested-routers-2/sub-route-two.component";
 
 import { TitleAndNavButtonModule } from "../directives/title-and-nav-button.module";
 
@@ -22,6 +26,14 @@ export const routerConfig = [
         children: [
             { path: "first", component: SubRouteOneComponent },
             { path: "second", component: SubRouteTwoComponent }
+        ]
+    },
+    {
+        path: "nested-routers-2",
+        component: NestedRoutersComponent2,
+        children: [
+            { path: "first", component: SubRouteOneComponent2 },
+            { path: "second", component: SubRouteTwoComponent2 }
         ]
     }
 ];
@@ -39,7 +51,10 @@ export const routerConfig = [
         RoutingExamplesComponent,
         NestedRoutersComponent,
         SubRouteOneComponent,
-        SubRouteTwoComponent
+        SubRouteTwoComponent,
+        NestedRoutersComponent2,
+        SubRouteOneComponent2,
+        SubRouteTwoComponent2
     ]
 })
 
